@@ -5,21 +5,27 @@ const menus = {
     martes: {comida:"Wok de verduras, patatas y pollo.",cena:"Pizza cottage de atún."},
     miercoles: {comida:"Ensalada de lentejas y feta.",cena:"Bowl de bacalao."},
     jueves: {comida:"Cuscús de pollo al curry.",cena:"Biscotes y ensalada de atún."},
-    viernes: {comida:"Ensalada de judías.",cena:"Burritos."}
+    viernes: {comida:"Ensalada de judías.",cena:"Burritos."},
+    sabado: {comida:"Aún por determinar.",cena:"Aún por determinar."},
+    domingo: {comida:"Aún por determinar.",cena:"Aún por determinar."}
   },
   2: {
     lunes: {comida:"Brócoli con pollo.",cena:"Salmón y trigueros."},
     martes: {comida:"Ensalada de atún.",cena:"Salteado de pollo y verduras."},
     miercoles: {comida:"Ensalada de garbanzos.",cena:"Bacalao con judías."},
     jueves: {comida:"Ensalada de pollo.",cena:"Lomo y ensalada de rúcula."},
-    viernes: {comida:"Atún fresco con verduras.",cena:"Curry de pollo."}
+    viernes: {comida:"Atún fresco con verduras.",cena:"Curry de pollo."},
+    sabado: {comida:"Aún por determinar.",cena:"Aún por determinar."},
+    domingo: {comida:"Aún por determinar.",cena:"Aún por determinar."}
   },
   3: {
     lunes: {comida:"Pollo con verduras.",cena:"Salmón con verduras."},
     martes: {comida:"Lentejas y pavo.",cena:"Brochetas de ternera y verduras"},
     miercoles: {comida:"Ensalada de garbanzos.",cena:"Merluza con verduras."},
     jueves: {comida:"Ensalada de quinoa.",cena:"Salmón con espinacas."},
-    viernes: {comida:"Pollo con arroz.",cena:"Wrap mixto."}
+    viernes: {comida:"Pollo con arroz.",cena:"Wrap mixto."},
+    sabado: {comida:"Aún por determinar.",cena:"Aún por determinar."},
+    domingo: {comida:"Aún por determinar.",cena:"Aún por determinar."}
   }
 };
 // 2. Función para renderizar los días en pantalla
