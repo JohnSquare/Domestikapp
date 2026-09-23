@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi menú semanal</title>
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+   <!-- <script type="module" src="script.js"></script>-->
+  </head>
+  <body>
+
+    <header>
+      <h1>Menú Semanal</h1>
+      <div class="selector-semana">
+        <button class="btn-semana" onclick="cargarSemana(1)">Semana 1</button>
+        <button class="btn-semana" onclick="cargarSemana(2)">Semana 2</button>
+        <button class="btn-semana" onclick="cargarSemana(3)">Semana 3</button>
+      </div>
+    </header>    
+    
+    <main id="contenedor-dias"></main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

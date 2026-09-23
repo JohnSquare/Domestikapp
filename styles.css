@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;  
+  background-color: #f0f2f5;
+  padding: 16px;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h1{
+  color: #1a252f;
+  margin-bottom: 12px;
+}
+
+.selector-semana{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-semana{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-semana:active{
+  background-color: #0056b3;
+}
+#contenedor-dias{
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.tarjeta-dia{
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+.tarjeta-dia h3{
+  margin-top: 0px;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+.tarjeta-dia p{
+  margin: 6px 0;
+  color: #444;
+}
+
