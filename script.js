@@ -28,6 +28,33 @@ const menus = {
     domingo: {comida:"Aún por determinar.",cena:"Aún por determinar."}
   }
 };
+//Credenciales del administrador
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "1234";
+
+//Referencias a las 3 pantallas
+const pantallaLogin = document.getElementById("pantalla-login");
+const pantallaAdmin = document.getElementById("pantalla-admin");
+const pantallaInvitado = document.getElementById("pantalla-invitado");
+
+// Elementos del login
+const formAdmin = document.getElementById("form-admin");
+const btnInvitado = document.getElementById("btn-invitado");
+const mensajeError = document.getElementById("mensaje-error");
+
+// 1. Iniciar sesión como administrador
+formAdmin.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const user = document.getElementById("usuario-admin").value;
+  const pass = document.getElementById("password-admin").value;
+
+  if(user == ADMIN_USER && pass == ADMIN_PASS){
+    localStorage.setItem("rolUsuario","admin");
+    mostrarVistaSegunRol();
+  }else{
+    mensajeError.style.display = "block";
+  }
+});
 // 2. Función para renderizar los días en pantalla
 function cargarSemana(numSemana){
   const contenedor = document.getElementById("contenedor-dias");
