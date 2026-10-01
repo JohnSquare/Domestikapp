@@ -55,7 +55,47 @@ formAdmin.addEventListener("submit", (e) => {
     mensajeError.style.display = "block";
   }
 });
-// 2. Función para renderizar los días en pantalla
+// 2. Iniciar sesión como Invitado
+btnInvitado.addEventListener("click", () => {
+  localStorage.setItem("rolUsuario", "invitado");
+  mostrarVistaSegunRol();
+});
+// 3. Función para cerrar sesión
+function cerrarSesion(){
+  localStorage.removeItem("rolUsuario");
+  mostrarLogin();
+}
+// 4. Control de la visibilidad de vistas
+function mostrarVistaSegunRol() {
+  const rol = localStorage.getItem("rolUsuario");
+
+  pantallaLogin.classList.add("oculto");
+  pantallaAdmin.classList.add("oculto");
+  pantallaInvitado.classList.add("oculto");
+
+  if (rol === "admin") {
+    pantallaAdmin.classList.remove("oculto");
+  }else if (rol === "invitado") {
+    pantallaInvitado.classList.remove("oculto");
+    cargarSemana(1); //Cargamos la Semana 1 por defecto
+  }else{
+    mostrarLogin();
+  }
+}
+
+function mostrarLogin() {
+  pantallaLogin.classList.remove("oculto");
+  pantallaAdmin.classList.add("oculto");
+  pantallaInvitado.classList.add("oculto");
+  formAdmin.reset();
+  mensajeError.style.display = "none";
+}
+
+// 5. Comprobar la sesión activa al abrir la app
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarVistaSegunRol();
+});
+// 6. Función para renderizar los días en pantalla
 function cargarSemana(numSemana){
   const contenedor = document.getElementById("contenedor-dias");
   contenedor.innerHTML = ""; // Vacíamos el contenedor antes de dibujar
@@ -81,4 +121,4 @@ function cargarSemana(numSemana){
   }
 }
 // 3. Cargamos la Semana 1 por defecto
-cargarSemana(1); 
+//cargarSemana(1); 
