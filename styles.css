@@ -55,8 +55,7 @@ h1{
 
 /* --- CONTROL DE VISIBILIDAD --- */
 .oculto {
-  /*display: none !important;*/
-display: block !important;
+  display: none !important;  
 }
 
 /* --- ESTILOS DE LOGIN --- */
@@ -152,4 +151,30 @@ display: block !important;
   color: #dc3545;
   font-size: 0.85rem;
   margin-bottom: 10px;
+}
+/* --- BARRA SUPERIOR Y BIENVENIDA ---*/
+.barra-superior{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 16px auto;  
+}
+.btn-logout{
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.contenedor-bienvenida{
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
