@@ -1,73 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi menú semanal</title>
-    <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi menú semanal</title>
+  <!--
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-    <link rel="stylesheet" href="styles.css" />
-   <!-- <script type="module" src="script.js"></script>-->
-  </head>
-  <body>
-<!-- PANTALLA 1: LOGIN -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- <script type="module" src="script.js"></script>-->
+</head>
+
+<body>
+  <!-- PANTALLA 1: LOGIN -->
   <div id="pantalla-login" class="contenedor-login">
     <div class="tarjeta-login">
       <h2>Bienvenido/a</h2>
-        <p>Selecciona tu modo de acceso</p>
-        <!-- Formulario para Administrador -->
-        <form id="form-admin">
-          <div class="grupo-campo">
-            <label for="usuario-admin">Usuario</label>
-            <input type="text" id="usuario-admin" placeholder="Ej: admin" required>
+      <p>Selecciona tu modo de acceso</p>
+      <!-- Formulario para Administrador -->
+      <form id="form-admin">
+        <div class="grupo-campo">
+          <label for="usuario-admin">Usuario</label>
+          <input type="text" id="usuario-admin" placeholder="Ej: admin" required>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="password-admin">Contraseña</label>
+          <input type="password" id="password-admin" placeholder="************" required>
+        </div>
+
+        <p id="mensaje-error" class="error-texto" style="display: none;">Credenciales incorrectas</p>
+        <button type="submit" class="btn-primary">Entrar como Admin</button>
+      </form>
+
+      <div class="separador">
+        <span>o</span>
+      </div>
+
+      <!-- Botón para invitados -->
+      <button id="btn-invitado" class="btn-secondary">Entrar como Invitado</button>
+    </div>
+  </div>
+      <!-- PANTALLA 2: BIENVENIDA ADMINISTRADOR (Futuro Gestor de Recetas) -->
+      <div id="pantalla-admin" class="oculto">
+        <header class="barra-superior">
+          <h1>Panel de Administración</h1>
+          <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>
+        </header>
+
+        <main class="contenedor-bienvenida">
+          <h2>¡Bienvenido, Administrador! </h2>
+          <p>Aquí se ubicará próximamente el gestor de recetas.</p>
+        </main>
+      </div>
+
+      <!-- PANTALLA 3: MENÚ SEMANAL (Invitados) -->
+      <div id="pantalla-invitado" class="oculto">
+        <header>
+          <div class="barra-superior">
+            <h1>Menú Semanal</h1>
+            <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>
           </div>
-
-          <div class="grupo-campo">
-            <label for="password-admin">Contraseña</label>
-            <input type="password" id="password-admin" placeholder="************" required>
+          <div class="selector-semana">
+            <button class="btn-semana" onclick="cargarSemana(1)">Semana 1</button>
+            <button class="btn-semana" onclick="cargarSemana(2)">Semana 2</button>
+            <button class="btn-semana" onclick="cargarSemana(3)">Semana 3</button>
           </div>
-          
-          <p id="mensaje-error" class="error-texto" style="display: none;">Credenciales incorrectas</p>
-          <button type="submit" class="btn-primary">Entrar como Admin</button>
-        </form>
+        </header>
+        <main id="contenedor-dias"></main>
+      </div>
+      <script src="script.js"></script>
+</body>
 
-        <div class="separador">
-          <span>o</span>
-        </div>
-
-        <!-- Botón para invitados -->
-        <button id="btn-invitado" class="btn-secondary">Entrar como Invitado</button>
-
-        <!-- PANTALLA 2: BIENVENIDA ADMINISTRADOR (Futuro Gestor de Recetas) -->
-        <div id="pantalla-admin" class="oculto">
-            <header class="barra-superior">
-              <h1>Panel de Administración</h1>
-              <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>              
-            </header>
-
-            <main class="contenedor-bienvenida">
-              <h2>¡Bienvenido, Administrador! </h2>
-              <p>Aquí se ubicará próximamente el gestor de recetas.</p>
-            </main>
-        </div>
-
-        <!-- PANTALLA 3: MENÚ SEMANAL (Invitados) -->
-        <div id="pantalla-invitado" class="oculto">
-          <header>
-            <div class="barra-superior">
-              <h1>Menú Semanal</h1>
-              <button class="btn-logout" onclick="cerrarSesion()">Cerrar sesión</button>              
-            </div>
-            <div class="selector-semana">
-              <button class="btn-semana" onclick="cargarSemana(1)">Semana 1</button>
-              <button class="btn-semana" onclick="cargarSemana(2)">Semana 2</button>
-              <button class="btn-semana" onclick="cargarSemana(3)">Semana 3</button>
-            </div>      
-          </header>
-          <main id="contenedor-dias"></main>
-        </div>
-    <script src="script.js"></script>
-  </body>
 </html>
