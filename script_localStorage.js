@@ -1,21 +1,3 @@
-// ==============================================
-// 1. Configuración y conexión con Firebase
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// ==============================================
-// Credenciales obtenidas del proyecto creado en Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyAxXcckUCq8RrQ7n_LOhdqLOGX00eLCWVk",
-  authDomain: "domestikapp.firebaseapp.com",
-  projectId: "domestikapp",
-  storageBucket: "domestikapp.firebasestorage.app",
-  messagingSenderId: "292002315195",
-  appId: "1:292002315195:web:b4361917e2fd6fc48d229e",
-  measurementId: "G-LJV58NM60L"
-};
-// Inicializacion de Firebase
-const app = firebaseConfig.apiKey !== "AIzaSyAxXcckUCq8RrQ7n_LOhdqLOGX00eLCWVk" ? window.dbConfig.initializaApp(firebaseConfig) : null;
-const db = app ? window.dbConfig.getFirestore(app) : null;
-
 //Base de datos con los menús
 const menus = {
   1: {
